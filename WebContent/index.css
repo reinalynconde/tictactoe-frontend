@@ -1,0 +1,51 @@
+div {
+	text-align: center;
+}
+
+table {
+	border: 1px solid black;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+#div-body {
+	max-width: 800px;
+	margin: auto;
+}
+
+#gameHolder-div {
+	visibility: hidden;
+}
+
+#gameGrid {
+	width: 300px;
+	height: 300px;
+}
+
+#gameHolder-div > div:nth-child(2){
+	max-width: 300px;
+	margin: auto;
+}
+
+#gameGrid > tbody > tr > td {
+	background-color: #5fc2ed;
+	font-size: 52px;
+}
+
+#highscore {
+	visibility: hidden;
+	max-width: 300px;
+	margin: auto;
+	margin-top: -450px;
+} 
+
+#highscore-table {
+	width: 300px
+}
+
+#time {
+	color: #02f5c4;
+}

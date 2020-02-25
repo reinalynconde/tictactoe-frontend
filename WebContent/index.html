@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tic Tac Toe</title>
+		<link href="index.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div id="div-body">
+			<div>
+				<h1>Let's Play Tic Tac Toe</h1>
+			</div>
+			<hr/>
+			<div>
+				<button class="tab" id="playTab">Play</button>
+				<button class="tab" id="highscoreTab" onclick="displayHighScore()">High score</button>
+			</div>
+			<hr/>
+			<div id="playDiv">
+				<div>
+					Player 1: <input type="text" name="playe1Name" id="player1NameInput"/>
+					Player 2: <input type="text" name="player2Name" id="player2NameInput"/>
+					<button id="registerBtn" onclick="registerPlayers()">Play!</button>
+				</div>
+				<hr/>
+				<div id="gameHolder-div">
+					<div>
+						<h4 id="turnCounter"></h4>
+						<h5>Player 1: X, Player 2: O</h5>
+						<h5 id="time">Time: 0:0</h5>
+					</div>
+					<div>
+						<table id="gameGrid">
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>8</td>
+								<td>9</td>
+							</tr>
+						</table>
+					</div>
+					<br>
+					<div>
+						Cell number: <input type="number" name="cell" id="cellNumberInput"/>
+						<button id="enterBtn" onclick="updateBoard()" disabled="true">Enter!</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div id="highscore">
+				<table id="highscore-table">
+					<thead>
+						<tr>
+							<td>Name</td>
+							<td>Time</td>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+	</body>
+</html>
