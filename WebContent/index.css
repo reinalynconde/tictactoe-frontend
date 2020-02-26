@@ -46,6 +46,10 @@ td {
 	width: 300px
 }
 
-#time {
-	color: #02f5c4;
+#player1-time {
+	color: red;
+}
+
+#player2-time {
+	color: green;
 }
