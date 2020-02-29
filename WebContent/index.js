@@ -9,11 +9,6 @@ var board = [
 	["4", "5", "6"],
 	["7", "8", "9"]
 ];
-var defaultBoard = [
-	["1", "2", "3"],
-	["4", "5", "6"],
-	["7", "8", "9"]
-];
 var timer = {
 	"player1" : {
 		"mins" : 0,
@@ -222,7 +217,11 @@ function resetUI(){
 }
 
 function resetVariables(){
-	board = defaultBoard;
+	board = [
+		["1", "2", "3"],
+		["4", "5", "6"],
+		["7", "8", "9"]
+	];
 
 	timer = {
 		"player1" : {
