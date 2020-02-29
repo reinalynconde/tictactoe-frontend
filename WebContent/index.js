@@ -2,7 +2,7 @@ const BASE_URL = "http://localhost:8080/tictactoe";
 var player1Name = "Player1";
 var player2Name = "Player2";
 var counter = 0;
-var player2Seconds = 0;
+var player1IntervalId = 0;
 var player2IntervalId = 0;
 var board = [
 	["1", "2", "3"],
@@ -203,6 +203,8 @@ function displayResults(winner){
 }
 
 function resetUI(){
+	$("#player1NameInput").val("");
+	$("#player2NameInput").val("");
 	$("#gameHolder-div").css("visibility", "hidden");
 	$("#player1NameInput").attr("disabled", false);
 	$("#player2NameInput").attr("disabled", false);
@@ -248,14 +250,13 @@ function get2DigitTime(timeString){
 }
 
 function appendHighScores(highscores){
-	let names = Object.keys(highscores);
 	let tbody = $("#highscore-table tbody");
-	console.log(tbody);
+	tbody.html("");
 
-	for(let i=0; i<names.length; i++){
+	for(let i=0; i<highscores.length; i++){
 		let tr = $("<tr>", {});
-		tr.append($("<td>", {}).text(names[i]));
-		tr.append($("<td>", {}).text(highscores[names[i]]));
+		tr.append($("<td>", {}).text(highscores[i].playerName));
+		tr.append($("<td>", {}).text(highscores[i].duration));
 
 		tbody.append(tr);
 	}
